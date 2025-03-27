@@ -129,6 +129,27 @@ dist
 .vscode-test
 
 # yarn v2
+
+
+# تجاهل مجلد node_modules
+node_modules/
+
+# تجاهل ملف البيئة .env
+.env
+
+# تجاهل الملفات المؤقتة التي قد تنشئها أنظمة التشغيل أو المحررات
+.DS_Store
+Thumbs.db
+
+# تجاهل مجلدات التكوين الخاصة بـ IDEs والمحررات مثل VS Code
+.vscode/
+.idea/
+
+# تجاهل ملفات التبعيات الخاصة بـ npm
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
 .yarn/cache
 .yarn/unplugged
 .yarn/build-state.yml
