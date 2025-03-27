@@ -87,7 +87,7 @@ function register() {
       "password": password
   };
 
-  axios.post('http://localhost:3000/register', regist_params, {
+  axios.post('https://full-server-chat-app.onrender.com/register', regist_params, {
       headers: { 'Content-Type': 'application/json' }
   })
   .then(function (response) {
@@ -114,7 +114,7 @@ function login() {
       "password": login_password
   };
 
-  axios.post('http://localhost:3000/login', login_params)
+  axios.post('https://full-server-chat-app.onrender.com/login', login_params)
       .then(function (response) {
         hideLoader()
           let user = response.data.user;
@@ -160,7 +160,7 @@ document.getElementById('user_name').innerHTML = `<i class="fa-solid fa-user"></
 // الاتصال بـ Socket.IO
 const user = JSON.parse(localStorage.getItem('user'));
 
-    socket = io("http://localhost:3000");
+    socket = io("https://full-server-chat-app.onrender.com");
 
     socket.on("connect", () => {
         const currentUserId = JSON.parse(localStorage.getItem("user")).id;
@@ -174,7 +174,7 @@ const user = JSON.parse(localStorage.getItem('user'));
 
       function all_users() {
         showLoader();
-        axios.get("http://localhost:3000/all_users")
+        axios.get("https://full-server-chat-app.onrender.com")
           .then(response => {
             const users = response.data.users;
             const count = response.data.count;
@@ -204,7 +204,7 @@ const user = JSON.parse(localStorage.getItem('user'));
                 selectedUserId = user._id;
                 const sender_id = JSON.parse(localStorage.getItem("user")).id;
               
-                axios.get(`http://localhost:3000/messages/${sender_id}/${selectedUserId}`)
+                axios.get(`https://full-server-chat-app.onrender.com/messages/${sender_id}/${selectedUserId}`)
                   .then(response => {
                     (() => {
                       if (window.innerWidth < 1200) {
@@ -411,7 +411,7 @@ function get_message() {
   function delete_chat() {  
     const sender_id = JSON.parse(localStorage.getItem('user'))?.id;
     showLoader();
-    axios.delete(`http://localhost:3000/delete_chat/${sender_id}/${selectedUserId}`)
+    axios.delete(`https://full-server-chat-app.onrender.com/delete_chat/${sender_id}/${selectedUserId}`)
       .then(response => {
         hideLoader();
         showNotification("Chat deleted successfully!", true);
