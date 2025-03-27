@@ -150,7 +150,7 @@ function no_scrolling_down() {
   
 
 
-let socket;
+
 let selectedUserId = null
 let unreadMessagesCount = {};
 
