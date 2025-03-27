@@ -160,7 +160,10 @@ document.getElementById('user_name').innerHTML = `<i class="fa-solid fa-user"></
 // الاتصال بـ Socket.IO
 const user = JSON.parse(localStorage.getItem('user'));
 
-    socket = io("https://full-server-chat-app.onrender.com");
+    const socket = io("https://full-server-chat-app.onrender.com", {
+  withCredentials: true,
+  transports: ["websocket", "polling"]
+});
 
     socket.on("connect", () => {
         const currentUserId = JSON.parse(localStorage.getItem("user")).id;
