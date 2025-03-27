@@ -177,7 +177,7 @@ const user = JSON.parse(localStorage.getItem('user'));
 
       function all_users() {
         showLoader();
-        axios.get("https://full-server-chat-app.onrender.com")
+        axios.get("https://full-server-chat-app.onrender.com/all_users")
           .then(response => {
             const users = response.data.users;
             const count = response.data.count;
