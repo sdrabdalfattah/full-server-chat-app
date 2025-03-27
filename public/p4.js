@@ -370,7 +370,7 @@ function get_message() {
         const messageHTML = `
           <div class="${containerClass}">
               <h1 class="${bodyClass}">${msg.message_body}</h1>
-              <h2 class="my_is_read">${msg.isRead ? '<span> read <i style="color:rgb(46, 161, 255);" class="fa-solid fa-check"></i></span>' : 'Not read <i class="fa-solid fa-clock"></i>'} - ${formattedTime}</h2>
+              <h2 class="my_is_read">${formattedTime}</h2>
           </div>
         `;
       
