@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="MOPOK.png" type="image/x-icon" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="p4.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>chatapp - prog 3 - by mopokdh</title>
+    </head>
+<body>
+
+
+   
+
+
+<div class="big_users_container" id="big_users_container">
+    <div class="users_header">
+    <h2 id="all_users_title"><i class="fa-solid fa-users"></i>all users (--)</h2>
+    <hr width="100%" style="border: 1px solid gray; margin-block: 10px;border-radius: 10px;">
+    <div class="user_params" style="display: flex; justify-content: space-between; align-items: center;">
+    <h3 id="user_name" class="user_name"><i class="fa-solid fa-user"></i>-- <span class="you_span" style="color: gray; font-size: 16px;">(YOU)</span></h3>
+    <button class="logout_btn" onclick="logout()">log out</button>
+    </div>
+</div>
+<div class="users_container" id="users_container">
+    <!-- سيتم إدخال المستخدمين هنا تلقائيًا -->
+  </div>
+</div>
+
+<div class="big_messages_container">
+    <div class="messages_header" id="messages_header">
+      <span class="users_list" onclick="show_users_list()"><i class="fa-solid fa-list-ul"></i></span>
+      sellect a user to chat with
+    </div>
+    <div class="messeges_container" id="messeges_container">
+  <!-- سيتم إدخال الرسائل هنا تلقائيًا -->
+
+    </div>
+    <div class="texting_container" id="texting_container">
+      <input id="message_body" placeholder="type something ..." type="text">
+      <button id="sendBTN" onclick="sendMessage()"><i class="fa-solid fa-arrow-up"></i></button>
+    </div>
+  </div>
+
+
+  
+<div class="loader-container" id="loader">
+  <div class="loader"></div>
+</div>
+
+  
+
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script src="p4.js"></script>
+</body>
+</html>
+
+
+
+
+

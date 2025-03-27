@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="icon" href="MOPOK.png" type="image/x-icon" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="p4.css">
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>chatapp - prog 3 - by mopokdh</title>
+    </head>
+
+
+    <body style="overflow: auto;">
+      
+        <div class="login_container" id="login_container">
+            <h2 style="color: white;font-size: 35px;margin-top: 80px;">login</h2>
+            <input type="text" id="login_email" placeholder="email">
+            <input type="password" id="login_password" placeholder="password">
+            <div class="login_btns" style="display: flex; margin-top: 20px; width: 80%; justify-content: space-between; align-items: center;">
+            <h3 style="font-size: 16px;font-weight: 500; color: white;">dont have a account ? <span style="color: rgb(0, 140, 255); cursor: pointer;" onclick="show_regist()">register</span></h3>
+            <button class="add" onclick="login()">login</button>
+        </div>
+        </div>
+        <div class="login_container" id="register_container">
+            <h2 style="color: white;font-size: 35px;margin-top: 60px;">register</h2>
+            <input type="text" id="email" placeholder="email">
+            <input type="text" id="username" placeholder="user name">
+            <input type="password" id="password" placeholder="password">
+            <div class="login_btns" style="display: flex; margin-top: 20px; width: 80%; justify-content: space-between; align-items: center;">
+            <h3 style="font-size: 16px;font-weight: 500; color: white;">already have an account ? <span style="color: rgb(0, 140, 255); cursor: pointer;" onclick="show_login()">login</span></h3>
+            <button class="add" onclick="register()">register</button>
+        </div>
+        </div>
+
+        <div class="loader-container" id="loader">
+            <div class="loader"></div>
+        </div>
+
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <script src="/socket.io/socket.io.js"></script>
+<script src="p4.js"></script>
+    </body>
+    </html>
